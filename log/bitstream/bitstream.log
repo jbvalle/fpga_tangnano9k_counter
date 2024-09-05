@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/home/kyrax/.pyenv/versions/3.11.2/bin/gowin_pack", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/kyrax/.pyenv/versions/3.11.2/lib/python3.11/site-packages/apycula/gowin_pack.py", line 2897, in main
+    bslib.write_bitstream(args.output, res, db.cmd_hdr, db.cmd_ftr, args.compress)
+  File "/home/kyrax/.pyenv/versions/3.11.2/lib/python3.11/site-packages/apycula/bslib.py", line 127, in write_bitstream
+    crc_ = calc.checksum(crcdat)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kyrax/.pyenv/versions/3.11.2/lib/python3.11/site-packages/crc/_crc.py", line 394, in checksum
+    self._crc_register.update(chunk)
+  File "/home/kyrax/.pyenv/versions/3.11.2/lib/python3.11/site-packages/crc/_crc.py", line 236, in update
+    self._register = self._process_byte(byte)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kyrax/.pyenv/versions/3.11.2/lib/python3.11/site-packages/crc/_crc.py", line 296, in _process_byte
+    for _ in byte:
+  File "/home/kyrax/.pyenv/versions/3.11.2/lib/python3.11/site-packages/crc/_crc.py", line 75, in __iter__
+    return (self[i] for i in range(len(self)))
+                             ^^^^^^^^^^^^^^^^
+KeyboardInterrupt

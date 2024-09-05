@@ -11,7 +11,7 @@ reg [23:0] clkCntr = 0;
 always @(posedge clk) begin
 
     clkCntr <= clkCntr + 1;
-    if (clkCntr == (MS_TICK * 50)) begin
+    if (clkCntr == (MS_TICK * 100)) begin
         clkCntr <= 0;
         ledCntr <= ledCntr + 1;
     end

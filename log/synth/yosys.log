@@ -1,0 +1,1043 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.23 (git sha1 7ce5011c24b)
+
+
+-- Running command `read_verilog src/counter.v; synth_gowin -top counter -json _out/counter.json' --
+
+1. Executing Verilog-2005 frontend: src/counter.v
+Parsing Verilog input from `src/counter.v' to AST representation.
+Generating RTLIL representation for module `\counter'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_GOWIN pass.
+
+2.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/gowin/cells_sim.v
+Parsing Verilog input from `/usr/bin/../share/yosys/gowin/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\__APICULA_LUT5'.
+Generating RTLIL representation for module `\__APICULA_LUT6'.
+Generating RTLIL representation for module `\__APICULA_LUT7'.
+Generating RTLIL representation for module `\__APICULA_LUT8'.
+Generating RTLIL representation for module `\MUX2'.
+Generating RTLIL representation for module `\MUX2_LUT5'.
+Generating RTLIL representation for module `\MUX2_LUT6'.
+Generating RTLIL representation for module `\MUX2_LUT7'.
+Generating RTLIL representation for module `\MUX2_LUT8'.
+Generating RTLIL representation for module `\DFF'.
+Generating RTLIL representation for module `\DFFE'.
+Generating RTLIL representation for module `\DFFS'.
+Generating RTLIL representation for module `\DFFSE'.
+Generating RTLIL representation for module `\DFFR'.
+Generating RTLIL representation for module `\DFFRE'.
+Generating RTLIL representation for module `\DFFP'.
+Generating RTLIL representation for module `\DFFPE'.
+Generating RTLIL representation for module `\DFFC'.
+Generating RTLIL representation for module `\DFFCE'.
+Generating RTLIL representation for module `\DFFN'.
+Generating RTLIL representation for module `\DFFNE'.
+Generating RTLIL representation for module `\DFFNS'.
+Generating RTLIL representation for module `\DFFNSE'.
+Generating RTLIL representation for module `\DFFNR'.
+Generating RTLIL representation for module `\DFFNRE'.
+Generating RTLIL representation for module `\DFFNP'.
+Generating RTLIL representation for module `\DFFNPE'.
+Generating RTLIL representation for module `\DFFNC'.
+Generating RTLIL representation for module `\DFFNCE'.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\IBUF'.
+Generating RTLIL representation for module `\OBUF'.
+Generating RTLIL representation for module `\TBUF'.
+Generating RTLIL representation for module `\IOBUF'.
+Generating RTLIL representation for module `\TLVDS_OBUF'.
+Generating RTLIL representation for module `\ODDR'.
+Generating RTLIL representation for module `\ODDRC'.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\ALU'.
+Generating RTLIL representation for module `\RAM16S1'.
+Generating RTLIL representation for module `\RAM16S2'.
+Generating RTLIL representation for module `\RAM16S4'.
+Generating RTLIL representation for module `\RAM16SDP1'.
+Generating RTLIL representation for module `\RAM16SDP2'.
+Generating RTLIL representation for module `\RAM16SDP4'.
+Generating RTLIL representation for module `\SP'.
+Generating RTLIL representation for module `\SPX9'.
+Generating RTLIL representation for module `\SDP'.
+Generating RTLIL representation for module `\SDPX9'.
+Generating RTLIL representation for module `\DP'.
+Generating RTLIL representation for module `\DPX9'.
+Generating RTLIL representation for module `\rPLL'.
+Generating RTLIL representation for module `\OSC'.
+Generating RTLIL representation for module `\OSCZ'.
+Generating RTLIL representation for module `\OSCF'.
+Generating RTLIL representation for module `\OSCH'.
+Successfully finished Verilog frontend.
+
+2.2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \counter
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \counter
+Removed 0 unused modules.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ALU.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:661$232'.
+Cleaned up 1 empty switch.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:535$228 in module DFFNCE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:515$226 in module DFFNC.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:496$224 in module DFFNPE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:476$222 in module DFFNP.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:457$220 in module DFFNRE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:437$218 in module DFFNR.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:418$216 in module DFFNSE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:398$214 in module DFFNS.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:348$208 in module DFFCE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:328$206 in module DFFC.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:309$204 in module DFFPE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:289$202 in module DFFP.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:270$200 in module DFFRE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:250$198 in module DFFR.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:231$196 in module DFFSE.
+Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/gowin/cells_sim.v:211$194 in module DFFS.
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 28 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$223'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$221'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$219'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$217'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$215'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$213'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFN.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$211'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$209'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$207'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$205'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$203'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$201'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$199'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$197'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$195'.
+  Set init value: \Q = 1'1
+Found init rule in `\DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$193'.
+  Set init value: \Q = 1'0
+Found init rule in `\DFF.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$191'.
+  Set init value: \Q = 1'0
+Found init rule in `\counter.$proc$src/counter.v:9$6'.
+  Set init value: \clkCntr = 24'000000000000000000000000
+Found init rule in `\counter.$proc$src/counter.v:8$5'.
+  Set init value: \ledCntr = 6'000000
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \CLEAR in `\DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:535$228'.
+Found async reset \CLEAR in `\DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:515$226'.
+Found async reset \PRESET in `\DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:496$224'.
+Found async reset \PRESET in `\DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:476$222'.
+Found async reset \CLEAR in `\DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:348$208'.
+Found async reset \CLEAR in `\DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:328$206'.
+Found async reset \PRESET in `\DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:309$204'.
+Found async reset \PRESET in `\DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:289$202'.
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~19 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ALU.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:661$232'.
+Creating decoders for process `\DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+Creating decoders for process `\DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:535$228'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+Creating decoders for process `\DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:515$226'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+Creating decoders for process `\DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:496$224'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$223'.
+Creating decoders for process `\DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:476$222'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$221'.
+Creating decoders for process `\DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:457$220'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$219'.
+Creating decoders for process `\DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:437$218'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$217'.
+Creating decoders for process `\DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:418$216'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$215'.
+Creating decoders for process `\DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:398$214'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$213'.
+Creating decoders for process `\DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:381$212'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFN.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$211'.
+Creating decoders for process `\DFFN.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:366$210'.
+Creating decoders for process `\DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$209'.
+Creating decoders for process `\DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:348$208'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$207'.
+Creating decoders for process `\DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:328$206'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$205'.
+Creating decoders for process `\DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:309$204'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$203'.
+Creating decoders for process `\DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:289$202'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$201'.
+Creating decoders for process `\DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:270$200'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$199'.
+Creating decoders for process `\DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:250$198'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$197'.
+Creating decoders for process `\DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:231$196'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$195'.
+Creating decoders for process `\DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:211$194'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$193'.
+Creating decoders for process `\DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:194$192'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DFF.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$191'.
+Creating decoders for process `\DFF.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:179$190'.
+Creating decoders for process `\counter.$proc$src/counter.v:9$6'.
+Creating decoders for process `\counter.$proc$src/counter.v:8$5'.
+Creating decoders for process `\counter.$proc$src/counter.v:11$1'.
+     1/2: $0\clkCntr[23:0]
+     2/2: $0\ledCntr[5:0]
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ALU.\C' using process `\ALU.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:661$232'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\ALU.\S' using process `\ALU.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:661$232'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DFFNCE.\Q' using process `\DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:535$228'.
+  created $adff cell `$procdff$324' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNC.\Q' using process `\DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:515$226'.
+  created $adff cell `$procdff$325' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNPE.\Q' using process `\DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:496$224'.
+  created $adff cell `$procdff$326' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNP.\Q' using process `\DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:476$222'.
+  created $adff cell `$procdff$327' with negative edge clock and positive level reset.
+Creating register for signal `\DFFNRE.\Q' using process `\DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:457$220'.
+  created $dff cell `$procdff$328' with negative edge clock.
+Creating register for signal `\DFFNR.\Q' using process `\DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:437$218'.
+  created $dff cell `$procdff$329' with negative edge clock.
+Creating register for signal `\DFFNSE.\Q' using process `\DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:418$216'.
+  created $dff cell `$procdff$330' with negative edge clock.
+Creating register for signal `\DFFNS.\Q' using process `\DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:398$214'.
+  created $dff cell `$procdff$331' with negative edge clock.
+Creating register for signal `\DFFNE.\Q' using process `\DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:381$212'.
+  created $dff cell `$procdff$332' with negative edge clock.
+Creating register for signal `\DFFN.\Q' using process `\DFFN.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:366$210'.
+  created $dff cell `$procdff$333' with negative edge clock.
+Creating register for signal `\DFFCE.\Q' using process `\DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:348$208'.
+  created $adff cell `$procdff$334' with positive edge clock and positive level reset.
+Creating register for signal `\DFFC.\Q' using process `\DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:328$206'.
+  created $adff cell `$procdff$335' with positive edge clock and positive level reset.
+Creating register for signal `\DFFPE.\Q' using process `\DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:309$204'.
+  created $adff cell `$procdff$336' with positive edge clock and positive level reset.
+Creating register for signal `\DFFP.\Q' using process `\DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:289$202'.
+  created $adff cell `$procdff$337' with positive edge clock and positive level reset.
+Creating register for signal `\DFFRE.\Q' using process `\DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:270$200'.
+  created $dff cell `$procdff$338' with positive edge clock.
+Creating register for signal `\DFFR.\Q' using process `\DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:250$198'.
+  created $dff cell `$procdff$339' with positive edge clock.
+Creating register for signal `\DFFSE.\Q' using process `\DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:231$196'.
+  created $dff cell `$procdff$340' with positive edge clock.
+Creating register for signal `\DFFS.\Q' using process `\DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:211$194'.
+  created $dff cell `$procdff$341' with positive edge clock.
+Creating register for signal `\DFFE.\Q' using process `\DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:194$192'.
+  created $dff cell `$procdff$342' with positive edge clock.
+Creating register for signal `\DFF.\Q' using process `\DFF.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:179$190'.
+  created $dff cell `$procdff$343' with positive edge clock.
+Creating register for signal `\counter.\ledCntr' using process `\counter.$proc$src/counter.v:11$1'.
+  created $dff cell `$procdff$344' with positive edge clock.
+Creating register for signal `\counter.\clkCntr' using process `\counter.$proc$src/counter.v:11$1'.
+  created $dff cell `$procdff$345' with positive edge clock.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ALU.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:661$232'.
+Removing empty process `DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$229'.
+Found and cleaned up 1 empty switch in `\DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:535$228'.
+Removing empty process `DFFNCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:535$228'.
+Removing empty process `DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$227'.
+Removing empty process `DFFNC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:515$226'.
+Removing empty process `DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$225'.
+Found and cleaned up 1 empty switch in `\DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:496$224'.
+Removing empty process `DFFNPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:496$224'.
+Removing empty process `DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$223'.
+Removing empty process `DFFNP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:476$222'.
+Removing empty process `DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$221'.
+Found and cleaned up 2 empty switches in `\DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:457$220'.
+Removing empty process `DFFNRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:457$220'.
+Removing empty process `DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$219'.
+Found and cleaned up 1 empty switch in `\DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:437$218'.
+Removing empty process `DFFNR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:437$218'.
+Removing empty process `DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$217'.
+Found and cleaned up 2 empty switches in `\DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:418$216'.
+Removing empty process `DFFNSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:418$216'.
+Removing empty process `DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$215'.
+Found and cleaned up 1 empty switch in `\DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:398$214'.
+Removing empty process `DFFNS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:398$214'.
+Removing empty process `DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$213'.
+Found and cleaned up 1 empty switch in `\DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:381$212'.
+Removing empty process `DFFNE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:381$212'.
+Removing empty process `DFFN.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$211'.
+Removing empty process `DFFN.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:366$210'.
+Removing empty process `DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$209'.
+Found and cleaned up 1 empty switch in `\DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:348$208'.
+Removing empty process `DFFCE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:348$208'.
+Removing empty process `DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$207'.
+Removing empty process `DFFC.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:328$206'.
+Removing empty process `DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$205'.
+Found and cleaned up 1 empty switch in `\DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:309$204'.
+Removing empty process `DFFPE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:309$204'.
+Removing empty process `DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$203'.
+Removing empty process `DFFP.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:289$202'.
+Removing empty process `DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$201'.
+Found and cleaned up 2 empty switches in `\DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:270$200'.
+Removing empty process `DFFRE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:270$200'.
+Removing empty process `DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$199'.
+Found and cleaned up 1 empty switch in `\DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:250$198'.
+Removing empty process `DFFR.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:250$198'.
+Removing empty process `DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$197'.
+Found and cleaned up 2 empty switches in `\DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:231$196'.
+Removing empty process `DFFSE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:231$196'.
+Removing empty process `DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$195'.
+Found and cleaned up 1 empty switch in `\DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:211$194'.
+Removing empty process `DFFS.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:211$194'.
+Removing empty process `DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$193'.
+Found and cleaned up 1 empty switch in `\DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:194$192'.
+Removing empty process `DFFE.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:194$192'.
+Removing empty process `DFF.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:0$191'.
+Removing empty process `DFF.$proc$/usr/bin/../share/yosys/gowin/cells_sim.v:179$190'.
+Removing empty process `counter.$proc$src/counter.v:9$6'.
+Removing empty process `counter.$proc$src/counter.v:8$5'.
+Found and cleaned up 1 empty switch in `\counter.$proc$src/counter.v:11$1'.
+Removing empty process `counter.$proc$src/counter.v:11$1'.
+Cleaned up 19 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.4. Executing FLATTEN pass (flatten design).
+
+2.5. Executing TRIBUF pass.
+
+2.6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.7. Executing SYNTH pass.
+
+2.7.1. Executing PROC pass (convert processes to netlists).
+
+2.7.1.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.7.1.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.7.1.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.7.1.4. Executing PROC_INIT pass (extract init attributes).
+
+2.7.1.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.7.1.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.7.1.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.7.1.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.7.1.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.7.1.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.7.1.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.7.1.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 6 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.4. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+
+2.7.5. Executing OPT pass (performing simple optimizations).
+
+2.7.5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+2.7.5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.7.5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.5.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.5.9. Finished OPT passes. (There is nothing left to do.)
+
+2.7.6. Executing FSM pass (extract and optimize FSM).
+
+2.7.6.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.7.6.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.7.6.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.6.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.6.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.7.6.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.7.6.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.7.7. Executing OPT pass (performing simple optimizations).
+
+2.7.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~2 debug messages>
+
+2.7.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.7.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$345 ($dff) from module counter (D = $add$src/counter.v:13$2_Y [23:0], Q = \clkCntr, rval = 24'000000000000000000000000).
+Adding EN signal on $procdff$344 ($dff) from module counter (D = $add$src/counter.v:16$4_Y [5:0], Q = \ledCntr).
+
+2.7.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+2.7.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.7.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.7.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.7.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.7.16. Finished OPT passes. (There is nothing left to do.)
+
+2.7.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell counter.$add$src/counter.v:13$2 ($add).
+Removed top 8 bits (of 32) from port Y of cell counter.$add$src/counter.v:13$2 ($add).
+Removed top 2 bits (of 24) from port B of cell counter.$eq$src/counter.v:14$3 ($eq).
+Removed top 31 bits (of 32) from port B of cell counter.$add$src/counter.v:16$4 ($add).
+Removed top 26 bits (of 32) from port Y of cell counter.$add$src/counter.v:16$4 ($add).
+Removed top 8 bits (of 32) from wire counter.$add$src/counter.v:13$2_Y.
+Removed top 26 bits (of 32) from wire counter.$add$src/counter.v:16$4_Y.
+
+2.7.9. Executing PEEPOPT pass (run peephole optimizers).
+
+2.7.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.7.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module counter:
+  creating $macc model for $add$src/counter.v:13$2 ($add).
+  creating $macc model for $add$src/counter.v:16$4 ($add).
+  creating $alu model for $macc $add$src/counter.v:16$4.
+  creating $alu model for $macc $add$src/counter.v:13$2.
+  creating $alu cell for $add$src/counter.v:13$2: $auto$alumacc.cc:485:replace_alu$350
+  creating $alu cell for $add$src/counter.v:16$4: $auto$alumacc.cc:485:replace_alu$353
+  created 2 $alu and 0 $macc cells.
+
+2.7.12. Executing SHARE pass (SAT-based resource sharing).
+
+2.7.13. Executing OPT pass (performing simple optimizations).
+
+2.7.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.7.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.7.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.7.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.7.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.7.13.9. Finished OPT passes. (There is nothing left to do.)
+
+2.7.14. Executing MEMORY pass.
+
+2.7.14.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.7.14.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.7.14.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.7.14.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.7.14.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.7.14.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.14.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.7.14.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.7.14.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.7.14.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.7.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.8. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.9. Executing TECHMAP pass (map to technology primitives).
+
+2.9.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/gowin/lutrams_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/gowin/lutrams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__GOWIN_LUTRAM_'.
+Successfully finished Verilog frontend.
+
+2.9.2. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/gowin/brams_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/gowin/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__GOWIN_SP_'.
+Generating RTLIL representation for module `\$__GOWIN_DP_'.
+Generating RTLIL representation for module `\$__GOWIN_SDP_'.
+Successfully finished Verilog frontend.
+
+2.9.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.10.5. Finished fast OPT passes.
+
+2.11. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \counter..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \counter.
+Performed a total of 0 changes.
+
+2.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+
+2.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.12.9. Finished OPT passes. (There is nothing left to do.)
+
+2.13. Executing TECHMAP pass (map to technology primitives).
+
+2.13.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.13.2. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/gowin/arith_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/gowin/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_gw1n_alu'.
+Successfully finished Verilog frontend.
+
+2.13.3. Continuing TECHMAP pass.
+Using template $paramod$79aa992f2eb7f354d4aaf651790713cf239111fa\_80_gw1n_alu for cells of type $alu.
+Using template $paramod$32efbfac1c4dc57230cf86180788fdfd12e3b511\_80_gw1n_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~150 debug messages>
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+<suppressed ~114 debug messages>
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\counter'.
+Removed a total of 0 cells.
+
+2.14.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 3 unused cells and 63 unused wires.
+<suppressed ~4 debug messages>
+
+2.14.5. Finished fast OPT passes.
+
+2.15. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Mapping port counter.clk using IBUF.
+Mapping port counter.led using OBUF.
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \counter..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.17. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.18. Executing TECHMAP pass (map to technology primitives).
+
+2.18.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/gowin/cells_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/gowin/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+2.18.2. Continuing TECHMAP pass.
+Using template \$_SDFF_PP0_ for cells of type $_SDFF_PP0_.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+No more expansions possible.
+<suppressed ~53 debug messages>
+
+2.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module counter.
+
+2.20. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.21. Executing ABC pass (technology mapping using ABC).
+
+2.21.1. Extracting gate netlist of module `\counter' to `<abc-temp-dir>/input.blif'..
+Extracted 62 gates and 86 wires to a netlist network with 24 inputs and 30 outputs.
+
+2.21.1.1. Executing ABC.
+Running ABC command: "berkeley-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + if 
+ABC: + mfs2 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+2.21.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:       36
+ABC RESULTS:        internal signals:       32
+ABC RESULTS:           input signals:       24
+ABC RESULTS:          output signals:       30
+Removing temp directory.
+Removed 0 unused cells and 218 unused wires.
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/gowin/cells_map.v
+Parsing Verilog input from `/usr/bin/../share/yosys/gowin/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod$33e58adf67c6b686a154c9ce8ebbc4b04b8cabc5\$lut for cells of type $lut.
+Using template $paramod$51a72b3c97628a3868b6745bc8baebb6552a1cd9\$lut for cells of type $lut.
+Using template $paramod$bf0d0292861bdee659ef5cbc5e58b330ac5871f9\$lut for cells of type $lut.
+Using template $paramod$9664483609d9e726df9697364de1aad825ad3979\$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~330 debug messages>
+
+2.23. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in counter.
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$946.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$962.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$957.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$958.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$937.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$938.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$942.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$943.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$928.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$928.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$947.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$946.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$953.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$953.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$945.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$952.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$952.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$954.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$954.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$945.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$942.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$944.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$944.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$941.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$943.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$941.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$951.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$951.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$955.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$955.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$950.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$950.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$949.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$949.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$937.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$936.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$947.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$938.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$936.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$939.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$962.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$961.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$940.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$948.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$963.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$963.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$959.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$956.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$959.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$957.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$961.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$956.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$960.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$960.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$940.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$948.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$947.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$935.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$940.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$938.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$963.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$962.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$928.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$935.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$939.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$937.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$936.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$956.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$941.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$942.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$943.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$944.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$945.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$946.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$958.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$948.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$949.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$950.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$951.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$952.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$953.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$954.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$955.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$935.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$957.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$958.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$959.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$960.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$961.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$927$auto$blifparse.cc:525:parse_blif$939.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+
+2.24. Executing SETUNDEF pass (replace undef values with defined constants).
+
+2.25. Executing HILOMAP pass (mapping to constant drivers).
+Removed 0 unused cells and 438 unused wires.
+
+2.26. Executing AUTONAME pass.
+Renamed 1090 objects in module counter (19 iterations).
+<suppressed ~504 debug messages>
+
+2.27. Executing HIERARCHY pass (managing design hierarchy).
+
+2.27.1. Analyzing design hierarchy..
+Top module:  \counter
+
+2.27.2. Analyzing design hierarchy..
+Top module:  \counter
+Removed 0 unused modules.
+
+2.28. Printing statistics.
+
+=== counter ===
+
+   Number of wires:                223
+   Number of wire bits:            345
+   Number of public wires:         223
+   Number of public wire bits:     345
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                285
+     ALU                            30
+     DFFE                            6
+     DFFR                           24
+     GND                             1
+     IBUF                            1
+     LUT1                           90
+     LUT4                           36
+     MUX2_LUT5                      60
+     MUX2_LUT6                      30
+     OBUF                            6
+     VCC                             1
+
+2.29. Executing CHECK pass (checking for obvious problems).
+Checking module counter...
+Found and reported 0 problems.
+
+2.30. Executing JSON backend.
+
+End of script. Logfile hash: 037528ed80, CPU: user 0.29s system 0.01s, MEM: 20.47 MB peak
+Yosys 0.23 (git sha1 7ce5011c24b)
+Time spent: 23% 10x read_verilog (0 sec), 15% 1x abc (0 sec), ...
